@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Calíope - Privacy Policy</title>
+    <title>Calíope - Privacy Policy / Política de Privacidad</title>
     <style>
         body {
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
@@ -16,57 +16,186 @@
         h1 { color: #1A1A2E; }
         h2 { color: #1A1A2E; margin-top: 2em; }
         .date { color: #666; font-size: 14px; }
+        .lang-switch {
+            display: flex;
+            gap: 8px;
+            justify-content: flex-end;
+            margin-bottom: 8px;
+        }
+        .lang-switch button {
+            font: inherit;
+            font-size: 14px;
+            padding: 6px 14px;
+            border: 1px solid #1A1A2E;
+            background: #fff;
+            color: #1A1A2E;
+            border-radius: 999px;
+            cursor: pointer;
+        }
+        .lang-switch button[aria-pressed="true"] {
+            background: #1A1A2E;
+            color: #fff;
+        }
+        /* Only the active language is shown. */
+        [data-lang] { display: none; }
+        [data-lang].active { display: block; }
+        hr.footer { margin-top: 3em; border: none; border-top: 1px solid #eee; }
+        .footer-note { font-size: 12px; color: #999; }
     </style>
 </head>
 <body>
-    <h1>Calíope - Privacy Policy</h1>
-    <p class="date">Last updated: September 2026</p>
+    <div class="lang-switch">
+        <button type="button" data-set-lang="es" aria-pressed="false">Español</button>
+        <button type="button" data-set-lang="en" aria-pressed="false">English</button>
+    </div>
 
-    <h2>Overview</h2>
-    <p>Calíope ("the App") is a teleprompter application for recording videos. We are committed to protecting your privacy. This policy explains what data the App accesses and how it is handled.</p>
+    <!-- ================= ESPAÑOL ================= -->
+    <div data-lang="es">
+        <h1>Calíope - Política de Privacidad</h1>
+        <p class="date">Última actualización: septiembre de 2026</p>
 
-    <h2>Data Collection</h2>
-    <p><strong>Calíope does not collect, store, or transmit any personal data to external servers.</strong></p>
-    <p>The App operates entirely offline. All data (scripts, settings, preferences) is stored locally on your device and is never sent to any third party.</p>
+        <h2>Resumen</h2>
+        <p>Calíope ("la App") es una aplicación de teleprompter para grabar videos. Nos comprometemos a proteger tu privacidad. Esta política explica a qué datos accede la App y cómo se gestionan.</p>
 
-    <h2>Device Permissions</h2>
-    <p>The App requests the following permissions solely for its core functionality. All processing happens on your device.</p>
-    <ul>
-        <li><strong>Camera:</strong> Used to record video with the teleprompter overlay. Video is processed locally on your device.</li>
-        <li><strong>Microphone:</strong> Used to record audio alongside video. Audio data is not transmitted externally.</li>
-        <li><strong>Save videos to your library (add-only):</strong> Used to save the videos you record to your device's photo library when you tap "Save". The App requests add-only (write) access and does not read or browse your existing library.</li>
-        <li><strong>Select a photo (virtual backgrounds):</strong> When you choose to set a photo from your gallery as a virtual background, the system photo picker lets you select a single image. The App receives only the image you pick; it does not scan or access the rest of your library. The selected image is processed and stored locally on your device.</li>
-    </ul>
+        <h2>Recopilación de Datos</h2>
+        <p><strong>Calíope no recopila, almacena ni transmite datos personales a servidores externos.</strong></p>
+        <p>La App funciona completamente offline. Todos los datos (scripts, configuraciones, preferencias) se guardan localmente en tu dispositivo y nunca se envían a terceros.</p>
 
-    <h2>Data Storage</h2>
-    <p>All app data is stored locally on your device using secure storage mechanisms provided by the operating system. This includes:</p>
-    <ul>
-        <li>Scripts you create or import</li>
-        <li>App settings and preferences</li>
-        <li>Language preference</li>
-    </ul>
-    <p>No data is synced to the cloud or shared with third parties.</p>
+        <h2>Permisos del Dispositivo</h2>
+        <p>La App solicita los siguientes permisos únicamente para su funcionalidad principal. Todo el procesamiento ocurre en tu dispositivo.</p>
+        <ul>
+            <li><strong>Cámara:</strong> se usa para grabar video con el texto del teleprompter superpuesto. El video se procesa localmente en tu dispositivo.</li>
+            <li><strong>Micrófono:</strong> se usa para grabar audio junto con el video. Los datos de audio no se transmiten externamente.</li>
+            <li><strong>Guardar videos en tu galería (solo escritura):</strong> se usa para guardar los videos que grabas en la galería de tu dispositivo cuando tocas "Guardar". La App solicita acceso solo de escritura y no lee ni explora tu galería existente.</li>
+            <li><strong>Seleccionar una foto (fondos virtuales):</strong> cuando eliges una foto de tu galería para usarla como fondo virtual, el selector de fotos del sistema te permite elegir una sola imagen. La App recibe únicamente la imagen que seleccionas; no escanea ni accede al resto de tu galería. La imagen seleccionada se procesa y almacena localmente en tu dispositivo.</li>
+        </ul>
 
-    <h2>Analytics & Tracking</h2>
-    <p>Calíope does not use any analytics, tracking, or advertising services. We do not collect usage data, crash reports, or device identifiers.</p>
+        <h2>Almacenamiento de Datos</h2>
+        <p>Todos los datos de la App se almacenan localmente en tu dispositivo usando los mecanismos de almacenamiento seguro del sistema operativo. Esto incluye:</p>
+        <ul>
+            <li>Scripts que creas o importas</li>
+            <li>Configuraciones y preferencias de la App</li>
+            <li>Preferencia de idioma</li>
+            <li>Fondos virtuales que guardas</li>
+        </ul>
+        <p>Ningún dato se sincroniza a la nube ni se comparte con terceros.</p>
 
-    <h2>Third-Party Services</h2>
-    <p>The App does not integrate with any third-party services that collect user data.</p>
+        <h2>Analítica y Rastreo</h2>
+        <p>Calíope no utiliza servicios de analítica, rastreo ni publicidad. No recopilamos datos de uso, reportes de fallos ni identificadores del dispositivo.</p>
 
-    <h2>Children's Privacy</h2>
-    <p>The App does not knowingly collect information from children under 13. The App is rated 4+ and does not contain age-restricted content.</p>
+        <h2>Servicios de Terceros</h2>
+        <p>La App no se integra con ningún servicio de terceros que recopile datos de usuario.</p>
 
-    <h2>Data Deletion</h2>
-    <p>All your data is stored locally on your device. To delete all app data, simply uninstall the App from your device. You can also delete individual scripts within the App.</p>
+        <h2>Privacidad de los Menores</h2>
+        <p>La App no recopila conscientemente información de menores de 13 años. La App tiene clasificación 4+ y no contiene contenido con restricción de edad.</p>
 
-    <h2>Changes to This Policy</h2>
-    <p>We may update this Privacy Policy from time to time. Any changes will be reflected in the "Last updated" date above.</p>
+        <h2>Eliminación de Datos</h2>
+        <p>Todos tus datos se almacenan localmente en tu dispositivo. Para eliminar todos los datos de la App, simplemente desinstálala de tu dispositivo. También puedes eliminar scripts individuales dentro de la App.</p>
 
-    <h2>Contact</h2>
-    <p>If you have questions about this Privacy Policy, please contact us at:</p>
-    <p><strong>Email:</strong> andresliscanoa@gmail.com</p>
+        <h2>Cambios en esta Política</h2>
+        <p>Podemos actualizar esta Política de Privacidad ocasionalmente. Cualquier cambio se reflejará en la fecha de "Última actualización" indicada arriba.</p>
 
-    <hr style="margin-top: 3em; border: none; border-top: 1px solid #eee;">
-    <p style="font-size: 12px; color: #999;">Calíope — The Muse of Eloquence</p>
+        <h2>Contacto</h2>
+        <p>Si tienes preguntas sobre esta Política de Privacidad, contáctanos en:</p>
+        <p><strong>Correo:</strong> caliope.app@gmail.com</p>
+
+        <hr class="footer">
+        <p class="footer-note">Calíope — La Musa de la Elocuencia</p>
+    </div>
+
+    <!-- ================= ENGLISH ================= -->
+    <div data-lang="en">
+        <h1>Calíope - Privacy Policy</h1>
+        <p class="date">Last updated: September 2026</p>
+
+        <h2>Overview</h2>
+        <p>Calíope ("the App") is a teleprompter application for recording videos. We are committed to protecting your privacy. This policy explains what data the App accesses and how it is handled.</p>
+
+        <h2>Data Collection</h2>
+        <p><strong>Calíope does not collect, store, or transmit any personal data to external servers.</strong></p>
+        <p>The App operates entirely offline. All data (scripts, settings, preferences) is stored locally on your device and is never sent to any third party.</p>
+
+        <h2>Device Permissions</h2>
+        <p>The App requests the following permissions solely for its core functionality. All processing happens on your device.</p>
+        <ul>
+            <li><strong>Camera:</strong> Used to record video with the teleprompter overlay. Video is processed locally on your device.</li>
+            <li><strong>Microphone:</strong> Used to record audio alongside video. Audio data is not transmitted externally.</li>
+            <li><strong>Save videos to your library (add-only):</strong> Used to save the videos you record to your device's photo library when you tap "Save". The App requests add-only (write) access and does not read or browse your existing library.</li>
+            <li><strong>Select a photo (virtual backgrounds):</strong> When you choose to set a photo from your gallery as a virtual background, the system photo picker lets you select a single image. The App receives only the image you pick; it does not scan or access the rest of your library. The selected image is processed and stored locally on your device.</li>
+        </ul>
+
+        <h2>Data Storage</h2>
+        <p>All app data is stored locally on your device using secure storage mechanisms provided by the operating system. This includes:</p>
+        <ul>
+            <li>Scripts you create or import</li>
+            <li>App settings and preferences</li>
+            <li>Language preference</li>
+            <li>Virtual backgrounds you save</li>
+        </ul>
+        <p>No data is synced to the cloud or shared with third parties.</p>
+
+        <h2>Analytics &amp; Tracking</h2>
+        <p>Calíope does not use any analytics, tracking, or advertising services. We do not collect usage data, crash reports, or device identifiers.</p>
+
+        <h2>Third-Party Services</h2>
+        <p>The App does not integrate with any third-party services that collect user data.</p>
+
+        <h2>Children's Privacy</h2>
+        <p>The App does not knowingly collect information from children under 13. The App is rated 4+ and does not contain age-restricted content.</p>
+
+        <h2>Data Deletion</h2>
+        <p>All your data is stored locally on your device. To delete all app data, simply uninstall the App from your device. You can also delete individual scripts within the App.</p>
+
+        <h2>Changes to This Policy</h2>
+        <p>We may update this Privacy Policy from time to time. Any changes will be reflected in the "Last updated" date above.</p>
+
+        <h2>Contact</h2>
+        <p>If you have questions about this Privacy Policy, please contact us at:</p>
+        <p><strong>Email:</strong> caliope.app@gmail.com</p>
+
+        <hr class="footer">
+        <p class="footer-note">Calíope — The Muse of Eloquence</p>
+    </div>
+
+    <script>
+        (function () {
+            var buttons = document.querySelectorAll('[data-set-lang]');
+            var sections = document.querySelectorAll('[data-lang]');
+
+            function applyLang(lang) {
+                if (lang !== 'es' && lang !== 'en') lang = 'en';
+                document.documentElement.lang = lang;
+                sections.forEach(function (el) {
+                    el.classList.toggle('active', el.getAttribute('data-lang') === lang);
+                });
+                buttons.forEach(function (btn) {
+                    btn.setAttribute('aria-pressed', btn.getAttribute('data-set-lang') === lang ? 'true' : 'false');
+                });
+                try { localStorage.setItem('caliope_privacy_lang', lang); } catch (e) {}
+            }
+
+            function initialLang() {
+                // 1) URL override: ?lang=es | ?lang=en
+                var param = new URLSearchParams(window.location.search).get('lang');
+                if (param === 'es' || param === 'en') return param;
+                // 2) Remembered choice
+                try {
+                    var saved = localStorage.getItem('caliope_privacy_lang');
+                    if (saved === 'es' || saved === 'en') return saved;
+                } catch (e) {}
+                // 3) Browser language (default English otherwise)
+                var nav = (navigator.language || navigator.userLanguage || 'en').toLowerCase();
+                return nav.indexOf('es') === 0 ? 'es' : 'en';
+            }
+
+            buttons.forEach(function (btn) {
+                btn.addEventListener('click', function () {
+                    applyLang(btn.getAttribute('data-set-lang'));
+                });
+            });
+
+            applyLang(initialLang());
+        })();
+    </script>
 </body>
 </html>
